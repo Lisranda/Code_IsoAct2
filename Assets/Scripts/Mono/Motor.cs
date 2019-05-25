@@ -12,10 +12,19 @@ public class Motor : MonoBehaviour
     }
 
     void Update () {
-        
     }
 
     public void MoveToTarget (Vector3 target) {
         agent.SetDestination (target);
+    }
+
+    public bool HasDestination () {
+        if (agent.destination != null && agent.destination != transform.position)
+            return true;
+        return false;
+    }
+
+    public Vector3 EchoDestination () {
+        return agent.destination;
     }
 }

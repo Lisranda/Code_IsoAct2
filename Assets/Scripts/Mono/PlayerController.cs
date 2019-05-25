@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
         motor = GetComponent<Motor> ();
     }
 
-    void Update () {
+    void Update () {        
         if (Input.GetMouseButton (0)) {
             Ray ray = player.cam.ScreenPointToRay (Input.mousePosition);
             if (Physics.Raycast (ray, out RaycastHit hit)) {
@@ -24,5 +24,5 @@ public class PlayerController : MonoBehaviour
                 motor.MoveToTarget (hit.point);
             }
         }
-    }
+    }    
 }
