@@ -8,11 +8,11 @@ public class PlayerCameraController : MonoBehaviour
     void Awake () {
         player = transform.parent.gameObject;
         initRotation = transform.rotation;
-        transform.position = player.transform.position - 15 * transform.forward;
+        transform.position = player.transform.position - 10 * transform.forward;
     }
 
     void LateUpdate () {
         transform.rotation = initRotation;
-        transform.position = player.transform.position - 15 * transform.forward;
+        transform.position = player.transform.position - 10 * transform.forward;
     }
 }

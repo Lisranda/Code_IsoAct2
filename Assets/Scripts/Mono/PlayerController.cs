@@ -15,14 +15,18 @@ public class PlayerController : MonoBehaviour
         motor = GetComponent<Motor> ();
     }
 
-    void Update () {        
+    void Update () {
+        LeftClickListener ();
+    }
+    
+    void LeftClickListener () {
         if (Input.GetMouseButton (0)) {
             Ray ray = player.cam.ScreenPointToRay (Input.mousePosition);
-            if (Physics.Raycast (ray, out RaycastHit hit)) {
+            if (Physics.Raycast (ray , out RaycastHit hit)) {
                 if (hit.transform.tag != "Terrain")
                     return;
                 motor.MoveToTarget (hit.point);
             }
         }
-    }    
+    }
 }
