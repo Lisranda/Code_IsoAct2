@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Motor))]
 public class PlayerController : MonoBehaviour
 {
+    const float rayCameraDistance = 100f;
+
     [SerializeField] LayerMask terrainMask;
     Pawn_Player player;
     Motor motor;
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void LeftClickListener () {
         if (Input.GetMouseButton (0)) {
             Ray ray = player.cam.ScreenPointToRay (Input.mousePosition);
-            if (Physics.Raycast (ray , out RaycastHit hit)) {
+            if (Physics.Raycast (ray , out RaycastHit hit, rayCameraDistance, terrainMask)) {
                 if (hit.transform.tag != "Terrain")
                     return;
                 motor.MoveToTarget (hit.point);
