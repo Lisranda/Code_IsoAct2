@@ -15,9 +15,10 @@ public class PlayerCameraController : MonoBehaviour
 
     void Update () {
         CameraZoom ();
+        FixCamera ();
     }
 
-    void LateUpdate () {
+    void FixCamera () {
         transform.rotation = initRotation;
         transform.position = player.transform.position - 50 * transform.forward;
     }

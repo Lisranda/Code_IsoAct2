@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Pawn_Player))]
 [RequireComponent(typeof(Motor))]
@@ -8,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     const float rayCameraDistance = 100f;
 
-    [SerializeField] LayerMask terrainMask;
+    public LayerMask terrainMask;
     Pawn_Player player;
     Motor motor;
 
