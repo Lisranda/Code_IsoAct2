@@ -576,6 +576,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806c77cea835a7745bc4315e053d3f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health:
+    baseValue: 0
+    currentValue: 0
+    maxValue: 0
+  Mana:
+    baseValue: 0
+    currentValue: 0
+    maxValue: 0
+  Strength:
+    baseValue: 0
+    currentValue: 0
+  Dexterity:
+    baseValue: 0
+    currentValue: 0
+  Constitution:
+    baseValue: 0
+    currentValue: 0
+  Wisdom:
+    baseValue: 0
+    currentValue: 0
+  Intelligence:
+    baseValue: 0
+    currentValue: 0
+  Dodge:
+    baseValue: 0
+    currentValue: 0
+  ManaRegen:
+    baseValue: 0
+    currentValue: 0
+  HitChance:
+    baseValue: 0
+    currentValue: 0
 --- !u!195 &2118469155
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -736,5 +768,11 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 4286102909904327482, guid: cd83b29a8483c0c4a96b9395ede063e2,
+        type: 3}
+      propertyPath: TestSTR
+      value: 
+      objectReference: {fileID: 11400000, guid: 2414718d4b3ed7f44966dcc34fd0a7fb,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd83b29a8483c0c4a96b9395ede063e2, type: 3}
