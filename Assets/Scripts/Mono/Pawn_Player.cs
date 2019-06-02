@@ -4,7 +4,8 @@ public class Pawn_Player : Pawn
 {
     public Camera cam;
 
-    void Awake () {
+    protected override void Awake () {
+        base.Awake ();
         cam = GetComponentInChildren<Camera> ();
     }
 }

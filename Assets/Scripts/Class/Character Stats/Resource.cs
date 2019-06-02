@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Resource : Statistic
+public abstract class Resource : Statistic
 {
-    [SerializeField] int maxValue;
+    public int CurrentValue { get; protected set; }
+
+    protected virtual int BasePerLevel { get; }
+
+    public Resource (Pawn pawn) : base (pawn) {
+    }
 }
