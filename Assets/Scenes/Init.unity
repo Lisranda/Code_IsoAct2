@@ -539,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2118469152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,38 +576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806c77cea835a7745bc4315e053d3f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health:
-    baseValue: 0
-    currentValue: 0
-    maxValue: 0
-  Mana:
-    baseValue: 0
-    currentValue: 0
-    maxValue: 0
-  Strength:
-    baseValue: 0
-    currentValue: 0
-  Dexterity:
-    baseValue: 0
-    currentValue: 0
-  Constitution:
-    baseValue: 0
-    currentValue: 0
-  Wisdom:
-    baseValue: 0
-    currentValue: 0
-  Intelligence:
-    baseValue: 0
-    currentValue: 0
-  Dodge:
-    baseValue: 0
-    currentValue: 0
-  ManaRegen:
-    baseValue: 0
-    currentValue: 0
-  HitChance:
-    baseValue: 0
-    currentValue: 0
 --- !u!195 &2118469155
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum StatType {
-    Strength,
-    Dexterity,
-    Constitution,
-    Wisdom,
-    Intelligence,
-    Health,
-    Mana,
-    Armor,
-    StrengthDamage,
-    DexterityDamage,
-    IntelligenceDamage
+    Strength = 100,
+    Dexterity = 101,
+    Constitution = 102,
+    Wisdom = 103,
+    Intelligence = 104,
+    Health = 200,
+    Mana = 201,
+    Armor = 300,
+    StrengthDamage = 301,
+    DexterityDamage =302,
+    IntelligenceDamage = 303
 }
 
 public abstract class Statistic
