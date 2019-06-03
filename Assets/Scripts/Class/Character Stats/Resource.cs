@@ -8,6 +8,6 @@ public abstract class Resource : Statistic
 
     protected virtual int BasePerLevel { get; }
 
-    public Resource (Pawn pawn) : base (pawn) {
+    public Resource (CharacterStats stats) : base (stats) {
     }
 }

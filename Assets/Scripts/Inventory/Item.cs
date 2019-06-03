@@ -6,6 +6,6 @@ public abstract class Item : ScriptableObject
 {
     public string itemName = "New Item";
 
-    public virtual void UseItem (Pawn userPawn) {
+    public virtual void UseItem (CharacterStats stats) {
     }
 }

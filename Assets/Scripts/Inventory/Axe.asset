@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   itemName: New Item
-  modifiers:
-  - StatType: 0
-    ModName: Axe
-    ModType: 0
-    ModDomain: 1
-    FlatValue: 10
+  flatModifiers:
+  - ModDomain: 0
+    StatType: 0
+    ModName: 
+    FlatValue: 0
+  percentModifiers:
+  - ModDomain: 0
+    StatType: 0
+    ModName: 
     PercentValue: 0

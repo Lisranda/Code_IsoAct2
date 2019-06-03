@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Calculated : Statistic
 {
-    public Calculated (Pawn pawn) : base (pawn) {
+    public Calculated (CharacterStats stats) : base (stats) {
 
     }
 }

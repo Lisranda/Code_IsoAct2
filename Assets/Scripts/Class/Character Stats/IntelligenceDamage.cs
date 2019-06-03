@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class IntelligenceDamage : Calculated
 {
-    public IntelligenceDamage (Pawn pawn) : base (pawn) {
+    public IntelligenceDamage (CharacterStats stats) : base (stats) {
 
     }
 
-    protected override int CalculateBase () {
-        return pawn.Intelligence.Influencer;
-    }
+    //protected override int CalculateBase () {
+    //    return pawn.Intelligence.Influencer;
+    //}
 }

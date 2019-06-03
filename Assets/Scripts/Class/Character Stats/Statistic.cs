@@ -2,20 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StatType {
-    Strength = 100,
-    Dexterity = 101,
-    Constitution = 102,
-    Wisdom = 103,
-    Intelligence = 104,
-    Health = 200,
-    Mana = 201,
-    Armor = 300,
-    StrengthDamage = 301,
-    DexterityDamage =302,
-    IntelligenceDamage = 303
-}
-
+[System.Serializable]
 public abstract class Statistic
 {
     protected List<StatMod> flatModifiers;
@@ -28,7 +15,7 @@ public abstract class Statistic
     protected int swapBase;
     protected int staleBase = int.MinValue;
 
-    public Pawn pawn;
+    public CharacterStats stats;
 
     public virtual int BaseValue {
         get {
@@ -51,8 +38,8 @@ public abstract class Statistic
         }
     }
 
-    public Statistic (Pawn pawn) {
-        this.pawn = pawn;
+    public Statistic (CharacterStats stats) {
+        this.stats = stats;
         flatModifiers = new List<StatMod> ();
         percentModifiers = new List<StatMod> ();
     }
@@ -129,11 +116,11 @@ public abstract class Statistic
         int calcValue = BaseValue;
 
         for (int i = 0 ; i < flatModifiers.Count ; i++) {
-            calcValue += flatModifiers [i].FlatValue;
+            calcValue += ((FlatMod)flatModifiers [i]).FlatValue;
         }
 
         for (int i = 0 ; i < percentModifiers.Count ; i++) {
-            calcValue += Mathf.CeilToInt (BaseValue * percentModifiers [i].PercentValue);
+            calcValue += Mathf.CeilToInt (BaseValue * ((PercentMod)percentModifiers [i]).PercentValue);
         }
 
         return calcValue;

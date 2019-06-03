@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DexterityDamage : Calculated
 {
-    public DexterityDamage (Pawn pawn) : base (pawn) {
+    public DexterityDamage (CharacterStats stats) : base (stats) {
 
     }
 
-    protected override int CalculateBase () {
-        return pawn.Dexterity.Influencer;
-    }
+    //protected override int CalculateBase () {
+    //    return pawn.Dexterity.Influencer;
+    //}
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StrengthDamage : Calculated
 {
-    public StrengthDamage (Pawn pawn) : base (pawn) {
+    public StrengthDamage (CharacterStats stats) : base (stats) {
 
     }
 
-    protected override int CalculateBase () {
-        return pawn.Strength.Influencer;
-    }
+    //protected override int CalculateBase () {
+    //    return pawn.Strength.Influencer;
+    //}
 }

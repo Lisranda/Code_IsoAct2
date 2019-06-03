@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Armor : Calculated
 {
-    public Armor (Pawn pawn) : base (pawn) {
+    public Armor (CharacterStats stats) : base (stats) {
     }
 
-    protected override int CalculateBase () {
-        return pawn.Dexterity.Influencer;
-    }
+    //protected override int CalculateBase () {
+    //    return pawn.Dexterity.Influencer;
+    //}
 }

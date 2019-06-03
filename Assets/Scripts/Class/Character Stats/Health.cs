@@ -6,13 +6,13 @@ public class Health : Resource
 {
     protected override int BasePerLevel { get; } = 10;
 
-    public Health (Pawn pawn) : base (pawn) {
+    public Health (CharacterStats stats) : base (stats) {
         CurrentValue = MaxValue;
     }
 
-    protected override int CalculateBase () {
-        return (pawn.Level * BasePerLevel) + pawn.Constitution.Influencer;
-    }
+    //protected override int CalculateBase () {
+    //    return (pawn.Level * BasePerLevel) + pawn.Constitution.Influencer;
+    //}
 
     public void LowerHealth (uint amount) {
         if ((CurrentValue - amount) <= 0) {

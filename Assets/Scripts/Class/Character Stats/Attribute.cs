@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Attribute : Statistic
 {
     const int initialAttributeValue = 5;    
@@ -12,7 +13,7 @@ public class Attribute : Statistic
         }
     }
 
-    public Attribute (Pawn pawn) : base (pawn) {
+    public Attribute (CharacterStats stats) : base (stats) {
         
     }
     
